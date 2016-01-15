@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,20 +65,20 @@
 	<!-- Home Section -->
 	<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
 		<div class="intro">
-			<div class="intro-sub">I am X</div>
-			<h1>Creative <span>Designer</span></h1>
-			<p>I am a fully professional freelance creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies is a great <br> feel free to contact creative.</p>
+			<div class="intro-sub">I am</div>
+			<h1>Márcio José Gurka Júnior</h1>
+			<p>A creative, proactive, innovative and optimist person and professional, I am always looking for new personal and profissional experiences,<br> and always trying to improve the skills that I already have.<br> I am involving with innovative projects, web design and systems developments, besides projects and people management.<br> I am open to listen and develop innovative ideas with teamwork to achieve the goals, whether personal or professional.</p>
 
       <div class="social-icons">
         <ul class="list-inline">
           <li><a href="https://www.facebook.com/marcio.gurka"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-github"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://github.com/marciogurka"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://plus.google.com/u/0/100145755963441494588/"><i class="fa fa-google-plus"></i></a></li>
           <li><a href="https://www.instagram.com/marciogurka/"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-spotify"></i></a></li>
+          <li><a href="https://br.linkedin.com/in/marciogurkajr"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://play.spotify.com/user/marciogurka"><i class="fa fa-spotify"></i></a></li>
           <li><a href="http://steamcommunity.com/profiles/76561198119773332/"><i class="fa fa-steam-square"></i></a></li>
-          <li><a href="#"><i class="fa fa-skype"></i></a></li>
+          <li><span class="" data-hasqtip="track"><a href="skype:gurka.marcio"><i class="fa fa-skype"></i></a></span></li>
           <li><a href="https://twitter.com/marciogurka"><i class="fa fa-twitter"></i></a></li>
           <li><span class="whatsapp" data-hasqtip="track"><a href="#"><i class="fa fa-whatsapp"></i></a></span></li>
 
@@ -106,7 +106,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+					<a class="navbar-brand" href="index.html"><h1>Márcio José Gurka Jr.</h1></a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="custom-collapse">
@@ -138,12 +138,12 @@
                 <img src="assets/images/myphoto.jpg" alt="">
               </div>
               <ul>
-                <li><strong>Name:</strong> John Doe</li>
-                <li><strong>Date of birth:</strong> 05 Dec 1993</li>
-                <li><strong>Address:</strong> 239/2 Awesome Street, USA</li>
-                <li><strong>Nationality:</strong> American</li>
-                <li><strong>Phone:</strong> (000) 1234 56789</li>
-                <li><strong>Email:</strong> yourmail@iamx.com</li>
+                <li><strong>Name:</strong> Márcio José Gurka Júnior</li>
+                <li><strong>Date of birth:</strong> 06 Jan 1995</li>
+                <li><strong>Address:</strong> 115 São Jerônimo da Serra Street, Ponta Grossa, Paraná, Brazil</li>
+                <li><strong>Nationality:</strong> Brazilian</li>
+                <li><strong>Phone:</strong> (+55) 042 9982 4591</li>
+                <li><strong>Email:</strong> marciogurkajr@gmail.com</li>
               </ul>
             </div>
           </div> <!-- col-md-4 -->
@@ -908,7 +908,7 @@
   	$(document).ready(function(){
   		$(".whatsapp").qtip({
   			content:{
-  				text: '+55(042)9982-4591'
+  				text: '(+55) 042 9982 4591'
   			},
   			style: { 
   				classes: 'qtip-youtube',
@@ -932,6 +932,33 @@
             }
         }
   		});
+
+      $(".skype").qtip({
+        content:{
+          text: 'gurka.marcio'
+        },
+        style: { 
+          classes: 'qtip-youtube',
+          width: '150px',
+          height: '50px'
+          },
+        position: {
+            target: 'mouse',
+            adjust: {
+                mouse: true  // Can be omitted (e.g. default behaviour)
+            }
+        },
+    show: {
+            effect: function() {
+                $(this).fadeTo(500, 1);
+            }
+        },
+        hide: {
+            effect: function() {
+                $(this).fadeOut();
+            }
+        }
+      });
   	});
   </script>
 </body>

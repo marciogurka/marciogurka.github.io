@@ -300,7 +300,7 @@ ul.list-check li::before {
 /* === HOME === */
 @media (max-width : 640px) {
     .tt-fullHeight{
-        height: 560px !important;
+        height: 650px !important;
     }
 }
 
@@ -1790,4 +1790,14 @@ Icon for all respective meta
     border: 5px solid #FFF;
     padding: 5px;
     box-shadow: 0 0px 0px 1px #eee;
+}
+
+/*Interests*/
+
+.interests{
+    font-size: 2em;
+}
+.div-interests{
+    margin: 5px 0px;
+    text-align: center;
 }

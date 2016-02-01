@@ -277,7 +277,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     (function () {
-        var myLatlng = new google.maps.LatLng(41.372641, -74.687387);
+        var myLatlng = new google.maps.LatLng(-25.0973830,-50.1838998);
 
             var styles = [
                 {
@@ -341,7 +341,21 @@ jQuery(function ($) {
 
     }());
 
+    // -------------------------------------------------------------
+    // Email
+    // -------------------------------------------------------------
 
+    $("#sendemail").click(function(){
+        var email = "marciogurkajr@gmail.com";
+        var subject = $("#InputSubject").val();
+        var name = $("#InputName1").val();
+        var from = $("#InputEmail1").val();
+        var message = $("#InputTextarea").val();
+        var body = "Nome: " + name + "\n\n" + "E-mail para contato:" + from + "\n\n" + "Mensagem:" + message;
+        document.location.href = "mailto:' + email + '?subject=' +subject+ '&body=' +body+'";
+        alert("E-mail enviado!");
+    });
+    
 });
 
 

@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 27px;
     line-height: 36px;
 }
 
@@ -360,6 +360,7 @@ ul.list-check li::before {
 	text-transform: uppercase;
 	display: block;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 /* 
@@ -372,7 +373,7 @@ SOCIAL ICON
     position: relative;
     color: #fff;
     font-size: 18px;
-    margin: 0 7px;
+    margin: 10px 8px !important;
     line-height: 40px;
     text-align: center;
     width: 40px;

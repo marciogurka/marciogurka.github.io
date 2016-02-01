@@ -340,22 +340,6 @@ jQuery(function ($) {
             });
 
     }());
-
-    // -------------------------------------------------------------
-    // Email
-    // -------------------------------------------------------------
-
-    /*$("#sendemail").click(function(){
-        var email = "marciogurkajr@gmail.com";
-        var subject = $("#InputSubject").val();
-        var name = $("#InputName1").val();
-        var from = $("#InputEmail1").val();
-        var message = $("#InputTextarea").val();
-        var body = "Nome: " + name + "\n\n" + "E-mail para contato:" + from + "\n\n" + "Mensagem:" + message;
-        document.location.href = "mailto:' + email + '?subject=' +subject+ '&body=' +body+'";
-        alert("E-mail enviado!");
-    });*/
-    
 });
 
 

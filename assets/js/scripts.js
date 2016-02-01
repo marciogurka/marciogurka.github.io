@@ -345,7 +345,7 @@ jQuery(function ($) {
     // Email
     // -------------------------------------------------------------
 
-    $("#sendemail").click(function(){
+    /*$("#sendemail").click(function(){
         var email = "marciogurkajr@gmail.com";
         var subject = $("#InputSubject").val();
         var name = $("#InputName1").val();
@@ -354,7 +354,7 @@ jQuery(function ($) {
         var body = "Nome: " + name + "\n\n" + "E-mail para contato:" + from + "\n\n" + "Mensagem:" + message;
         document.location.href = "mailto:' + email + '?subject=' +subject+ '&body=' +body+'";
         alert("E-mail enviado!");
-    });
+    });*/
     
 });
 

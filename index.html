@@ -45,7 +45,15 @@
   <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
   <link rel="manifest" href="icon/manifest.json">
-  <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" /></script>
+  <script type="text/javascript">
+	function googleTranslateElementInit() {
+  		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+	  	jQuery('.goog-logo-link').css('display', 'none');
+      	jQuery('.goog-te-gadget').css('font-size', '0');
+	}
+
+	</script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -106,7 +114,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><h1>Márcio José Gurka Jr.</h1></a>
+					<a class="navbar-brand" href="index.html"><H3>Márcio José Gurka Jr.</H3></a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="custom-collapse">
@@ -117,7 +125,7 @@
 						<li><a href="#skills">Skills</a></li>
 						<li><a href="#works">Works</a></li>
             			<li><a href="#contact">Contact</a></li>
-            			<li><a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;"/></a> </li>
+            			<li><A><div id="google_translate_element"></div></A></li>
 					</ul>
 					
 				</div>
@@ -186,7 +194,7 @@
       <div class="tf-bg-overlay">
         <div class="container">
           <div class="control">
-            <div class="video-intro text-center">
+            <div class="video-intro text-center col-md-12">
             	<h2 class="wow fadeInUp">“Innovation is change that unlocks new value.” <small> – Jamie Notter</small></h2>
             </div>         
           </div>
@@ -444,7 +452,7 @@ academic systems; Technical support for users; Improved and maintaned institutio
     <!-- Skills Section -->
     <section id="skills" class="skills-section section-padding">
       <div class="container">
-        <h2 class="section-title wow fadeInUp">General Skills</h2>
+        <h3 class="skill-section wow fadeInUp">General Skills</h3>
 
         <div class="row">
           <div class="col-md-6">
@@ -497,7 +505,7 @@ academic systems; Technical support for users; Improved and maintaned institutio
           </div><!-- /.col-md-6 -->
         </div><!-- /.row -->
 
-        <h2 class="section-title wow fadeInUp">Programming Skills</h2>
+        <h3 class="skill-section wow fadeInUp">Programming Skills</h3>
           
         <div class="row more-skill text-center">
           	<div class="col-xs-12 col-sm-12s col-md-12">
@@ -833,14 +841,12 @@ PostgreSQL, Sybase, Laravel, NodeJS</p>
   			},
   			style: { 
   				classes: 'qtip-youtube',
-  				width: '150px',
-  				height: '50px'
+  				width: '150px'
   				},
   			position: {
-		        target: 'mouse',
-		        adjust: {
-		            mouse: true  // Can be omitted (e.g. default behaviour)
-		        }
+				my: 'top left',  // Position my top left...
+        		at: 'bottom right', // at the bottom right of...
+		    	target: 'mouse'
 		    },
 		show: {
             effect: function() {
@@ -853,33 +859,6 @@ PostgreSQL, Sybase, Laravel, NodeJS</p>
             }
         }
   		});
-
-      $(".skype").qtip({
-        content:{
-          text: 'gurka.marcio'
-        },
-        style: { 
-          classes: 'qtip-youtube',
-          width: '150px',
-          height: '50px'
-          },
-        position: {
-            target: 'mouse',
-            adjust: {
-                mouse: true  // Can be omitted (e.g. default behaviour)
-            }
-        },
-    show: {
-            effect: function() {
-                $(this).fadeTo(500, 1);
-            }
-        },
-        hide: {
-            effect: function() {
-                $(this).fadeOut();
-            }
-        }
-      });
   	});
   </script>
 </body>

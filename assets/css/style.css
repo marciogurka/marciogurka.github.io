@@ -1801,3 +1801,25 @@ Icon for all respective meta
     margin: 5px 0px;
     text-align: center;
 }
+
+/*Skills*/
+
+.skill-section{
+    text-align: center;
+    line-height: 55px;
+    font-size: 44px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.skill-section::after {
+    content: "";
+    background: url(../../assets/images/section-divider.png) no-repeat 0 0;
+    height: 15px;
+    width: 113px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    margin: 0 auto;
+}

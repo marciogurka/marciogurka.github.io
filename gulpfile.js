@@ -52,9 +52,9 @@ gulp.task('optimizeImg', function() {
     return gulp.src(imagesPath)
         .pipe(imagemin({
             progressive: false,
-           optimizationLevel: 7,
-            use: [pngquant({quality: '65-80', speed: 6})],
-            use: [imageminWebp({quality: 70})]
+            optimizationLevel: 7,
+            use: [pngquant({quality: '50', speed: 6})],
+            use: [imageminWebp({quality: 50})]
         }))
         .pipe(gulp.dest('dist/images/'));
 });

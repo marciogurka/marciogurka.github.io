@@ -245,3 +245,7 @@ textarea{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-app
 .pull-left{float:left;}
 .pull-right{float:right;}
 .align-center{margin-left:auto;margin-right:auto;text-align:center;}
+#crisp-chatbox > div > a {
+    bottom: 70px !important;
+    right: 5px !important;
+}

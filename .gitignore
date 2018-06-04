@@ -1,3 +1,8 @@
 *.DS_Store
 package-lock.json
 node_modules
+styles.html
+old
+.babelrc
+.jshintrc
+/.idea

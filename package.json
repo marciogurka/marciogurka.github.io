@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website of Márcio José Gurka Júnior",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp && http-server ./"
   },
   "repository": {
     "type": "git",

@@ -59,13 +59,17 @@ gulp.task('optimizeImg', function() {
         .pipe(gulp.dest('dist/images/'));
 });
 
+gulp.task('watch', function () {
+    // Usamos o `gulp.run` para rodar as tarefas
+    gulp.run('dist', 'optimizeImg');
+    // Usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
+    gulp.watch(files, function(evt) {
+        gulp.run('dist', 'optimizeImg');
+    });
+});
 
 //Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
 gulp.task('default', function() {
 	// Usamos o `gulp.run` para rodar as tarefas
-	// E usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
 	gulp.run('dist', 'optimizeImg');
-	gulp.watch(files, function(evt) {
-		gulp.run('dist', 'optimizeImg');
-	});
 });

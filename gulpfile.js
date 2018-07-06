@@ -1,16 +1,17 @@
 // Aqui nós carregamos o gulp e os plugins através da função `require` do nodejs
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var count = require('gulp-count');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var imageminWebp = require('imagemin-webp');
+const gulp = require('gulp');
+const jshint = require('gulp-jshint');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const count = require('gulp-count');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const imageminWebp = require('imagemin-webp');
+const htmlmin = require('gulp-htmlmin');
 
 // Definimos o diretorio dos arquivos para evitar repetição futuramente
-var files = [
+const files = [
 "./js/jquery-2.1.3.min.js",
 "./js/plugins.js",
 "./js/main.js",
@@ -21,7 +22,7 @@ var files = [
 "./assets/js/scripts.js"
 ];
 
-var imagesPath = ['images/*', 'images/works/*'];
+const imagesPath = ['images/*', 'images/works/*'];
 
 //Aqui criamos uma nova tarefa através do ´gulp.task´ e damos a ela o nome 'lint'
 gulp.task('lint', function() {
@@ -59,6 +60,18 @@ gulp.task('optimizeImg', function() {
         .pipe(gulp.dest('dist/images/'));
 });
 
+// Otimizando o HTML 
+gulp.task('optimizeHtml', function () {
+	return gulp.src('./src/index.html')
+    .pipe(htmlmin({
+    	collapseWhitespace: true,
+    	minifyJS: true,
+    	minifyCSS: true,
+    	removeComments: true,
+    }))
+    .pipe(gulp.dest('./'));
+})
+
 gulp.task('watch', function () {
     // Usamos o `gulp.run` para rodar as tarefas
     gulp.run('dist', 'optimizeImg');
@@ -71,5 +84,5 @@ gulp.task('watch', function () {
 //Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
 gulp.task('default', function() {
 	// Usamos o `gulp.run` para rodar as tarefas
-	gulp.run('dist', 'optimizeImg');
+	gulp.run('dist', 'optimizeImg', 'optimizeHtml');
 });

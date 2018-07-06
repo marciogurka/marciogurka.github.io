@@ -22,13 +22,14 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-count": "^0.3.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^3.3.0",
     "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
-    "jshint": "^2.9.5",
     "imagemin-pngquant": "^5.0.1",
     "imagemin-webp": "^4.0.0",
-    "gulp-imagemin": "^3.3.0"
+    "jshint": "^2.9.5"
   },
   "dependencies": {
     "typed.js": "^2.0.5"

@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const imageminWebp = require('imagemin-webp');
 const htmlmin = require('gulp-htmlmin');
+const inlineCss = require('gulp-inline-css');
 
 // Definimos o diretorio dos arquivos para evitar repetição futuramente
 const files = [
@@ -69,6 +70,7 @@ gulp.task('optimizeHtml', function () {
     	minifyCSS: true,
     	removeComments: true,
     }))
+    .pipe(inlineCss())
     .pipe(gulp.dest('./'));
 })
 

@@ -63,14 +63,14 @@ gulp.task('optimizeImg', function() {
 
 // Otimizando o HTML 
 gulp.task('optimizeHtml', function () {
-	return gulp.src('./src/index.html')
+	return gulp.src('./indexSrc.html')
     .pipe(htmlmin({
     	collapseWhitespace: true,
     	minifyJS: true,
     	minifyCSS: true,
     	removeComments: true,
     }))
-    .pipe(inlineCss())
+    .pipe(rename({basename: "index"}))
     .pipe(gulp.dest('./'));
 })
 

@@ -10,19 +10,17 @@ const pngquant = require('imagemin-pngquant');
 const imageminWebp = require('imagemin-webp');
 const htmlmin = require('gulp-htmlmin');
 const inlineCss = require('gulp-inline-css');
+const less = require('gulp-less');
+const path = require('path');
+const cleanCSS = require('gulp-clean-css');
 
-// Definimos o diretorio dos arquivos para evitar repetição futuramente
 const files = [
-"./js/jquery-2.1.3.min.js",
-"./js/plugins.js",
-"./js/main.js",
-"./node_modules/typed.js/lib/typed.js",
-"./assets/js/jquery.shuffle.min.js",
-"./assets/js/jquery.magnific-popup.min.js",
-"./assets/js/jquery.fitvids.js",
-"./assets/js/scripts.js"
-];
-
+    'js/dev/libs/jquery.min.js',
+    'node_modules/particles.js/particles.js',
+    'js/dev/libs/plugins/*.js',
+    'js/dev/modules.js'
+    ];
+const lessFiles = ['./less/style.less', './less/**/*.css'];
 const imagesPath = ['images/*', 'images/works/*'];
 
 //Aqui criamos uma nova tarefa através do ´gulp.task´ e damos a ela o nome 'lint'
@@ -43,10 +41,9 @@ gulp.task('dist', function() {
 	// E pra terminar usamos o `gulp.dest` para colocar os arquivos concatenados e minificados na pasta build/
 	gulp.src(files)
 	.pipe(count('## js-files selected'))
-	.pipe(concat('./dist'))
-	.pipe(rename('dist.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('./dist'));
+	.pipe(concat('./dist/js'))
+	.pipe(rename('all.min.js'))
+	.pipe(gulp.dest('./dist/js'));
 });
 
 //Otimizando as imagens
@@ -72,19 +69,30 @@ gulp.task('optimizeHtml', function () {
     }))
     .pipe(rename({basename: "index"}))
     .pipe(gulp.dest('./'));
-})
+});
+
+gulp.task('less', function () {
+  return gulp.src(lessFiles)
+    .pipe(less({
+        javascriptEnabled: true,
+        paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('./dist/css'));
+});
 
 gulp.task('watch', function () {
     // Usamos o `gulp.run` para rodar as tarefas
-    gulp.run('dist', 'optimizeImg');
+    gulp.run('dist');
     // Usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
     gulp.watch(files, function(evt) {
-        gulp.run('dist', 'optimizeImg');
+        gulp.run('dist');
     });
 });
 
 //Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
 gulp.task('default', function() {
 	// Usamos o `gulp.run` para rodar as tarefas
-	gulp.run('dist', 'optimizeImg', 'optimizeHtml');
+	gulp.run('dist', 'less', 'optimizeImg', 'optimizeHtml');
 });

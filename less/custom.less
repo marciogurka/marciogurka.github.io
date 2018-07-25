@@ -103,9 +103,98 @@ figure.featured-image {
 	margin: 1em 0;
 }
 
+.featured-image img {
+	width: 100%;
+}
+
 .featured-image figcaption {
 	padding-top: 5px;
     padding-left: 20px;
     font-size: 0.7rem;
     color: #71778c;
+}
+
+.number-value {
+	margin-bottom: 10px;
+	font-size: 40px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+}
+
+.number-value:after, .number-value:before {
+	display: none;
+}
+
+.number-title {
+	font-size: 40px;
+    font-size: 15px;
+}
+
+.objective-bg-video {
+	width: 100%;
+}
+
+.objective-text {
+	position: absolute;
+    top: 0;
+    height: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.objective-video-container {
+	    position: relative;
+}
+
+.menu-close-icon {
+	display: none !important;
+}
+
+@media screen and (max-width: 426px) {
+	.personal-information-col:last-child {
+	    padding-left: 65px;
+	}
+
+	.personal-information-col:first-child {
+	    width: 65px;
+	}
+	
+	.number {
+	    padding: 10px;
+	    height: 200px;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+
+	.objective-text {
+		padding: 30px 50px;
+	    position: static;
+	}
+
+	.objective-bg-video {
+		display: none;
+	}
+
+	.menu-wrapper.active .profile-photo {
+		width: 35%;
+	}
+	.menu-back {
+	   width: 80%;
+	}
+	.menu-close-icon {
+		display: block !important;
+		right: 0px;
+	    top: -5px;
+	    position: absolute;
+	    padding: 15px;
+	    z-index: 10;
+	}
+
 }

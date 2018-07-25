@@ -7,7 +7,6 @@ var appInitialized;
 
 	$(document).ready(function() {
 		particlesJS.load('particles-js', './particlesjs-config.json', function(data) {
-		  	console.log('callback - particles.js config loaded');
 		});
 		const link = ' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40marciogurka';
 		fetch(link, { headers: { "Content-Type": "application/json; charset=utf-8" }})

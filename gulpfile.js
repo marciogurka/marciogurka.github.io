@@ -21,7 +21,6 @@ const files = [
     'js/dev/modules.js'
     ];
 const lessFiles = ['./less/style.less', './less/**/*.css'];
-const imagesPath = ['images/*', 'images/works/*'];
 
 //Aqui criamos uma nova tarefa através do ´gulp.task´ e damos a ela o nome 'lint'
 gulp.task('lint', function() {
@@ -44,31 +43,6 @@ gulp.task('dist', function() {
 	.pipe(concat('./dist/js'))
 	.pipe(rename('all.min.js'))
 	.pipe(gulp.dest('./dist/js'));
-});
-
-//Otimizando as imagens
-gulp.task('optimizeImg', function() {
-    return gulp.src(imagesPath)
-        .pipe(imagemin({
-            progressive: false,
-            optimizationLevel: 7,
-            use: [pngquant({quality: '50', speed: 6})],
-            use: [imageminWebp({quality: 50})]
-        }))
-        .pipe(gulp.dest('dist/images/'));
-});
-
-// Otimizando o HTML 
-gulp.task('optimizeHtml', function () {
-	return gulp.src('./indexSrc.html')
-    .pipe(htmlmin({
-    	collapseWhitespace: true,
-    	minifyJS: true,
-    	minifyCSS: true,
-    	removeComments: true,
-    }))
-    .pipe(rename({basename: "index"}))
-    .pipe(gulp.dest('./'));
 });
 
 gulp.task('less', function () {
@@ -94,5 +68,5 @@ gulp.task('watch', function () {
 //Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
 gulp.task('default', function() {
 	// Usamos o `gulp.run` para rodar as tarefas
-	gulp.run('dist', 'less', 'optimizeImg', 'optimizeHtml');
+	gulp.run('dist', 'less');
 });

@@ -152,11 +152,53 @@ figure.featured-image {
 	    position: relative;
 }
 
-.menu-close-icon {
-	display: none !important;
+.profile {
+	> .menu-close-icon {
+		display: none;
+	}
+}
+
+.number {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 190px;
+
+	> .number-value {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		min-height: 80px;
+		width: 100%;
+	}
+}
+
+.profile-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	> .menu-close-icon {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 426px) {
+	.services .box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 0 25px;
+	}
+
+	.profile-name {
+		> .menu-close-icon {
+			display: none;
+		}
+	}
+
 	.personal-information-col:last-child {
 	    padding-left: 65px;
 	}
@@ -166,11 +208,12 @@ figure.featured-image {
 	}
 	
 	.number {
-	    padding: 10px;
-	    height: 200px;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		min-height: 140px;
+		padding: 10px;
 	}
 
 	.objective-text {

@@ -21,11 +21,11 @@
 
 .particles-js-canvas-el {
 	width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    background: #f5f5f5;
-    z-index: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: #f5f5f5;
+	z-index: 0;
 }
 
 .section .scroll-bar {
@@ -33,14 +33,14 @@
 }
 
 .page {
-    z-index: 10;
+	z-index: 10;
 }
 
 .services .box {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .services .box .box-icon {
@@ -55,7 +55,7 @@
 
 .quote {
 	text-align: center;
-    font-style: italic;
+	font-style: italic;
 }
 
 .schedule-title {
@@ -77,21 +77,21 @@
 
 @media (max-width: 1200px) {
 	.menu-trigger {
-	    display: flex !important;
-	    align-items: center;
-	    justify-content: center;
-	    background: rgba(255, 255, 255, 0.5) !important;
-	    border-radius: 50px !important; 
-	    padding: 10px;
-	    width: 50px;
-	    right: 15px !important;
-	    top: 15px !important;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.5) !important;
+		border-radius: 50px !important;
+		padding: 10px;
+		width: 50px;
+		right: 15px !important;
+		top: 15px !important;
 	}
 
 	.menu-wrapper {
-	    display: flex !important;
-	    align-items: center;
-	    justify-content: center;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -109,28 +109,29 @@ figure.featured-image {
 
 .featured-image figcaption {
 	padding-top: 5px;
-    padding-left: 20px;
-    font-size: 0.7rem;
-    color: #71778c;
+	padding-left: 20px;
+	font-size: 0.7rem;
+	color: #71778c;
 }
 
 .number-value {
 	margin-bottom: 10px;
 	font-size: 40px;
 	display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 280px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 280px;
 }
 
-.number-value:after, .number-value:before {
+.number-value:after,
+.number-value:before {
 	display: none;
 }
 
 .number-title {
 	font-size: 40px;
-    font-size: 15px;
+	font-size: 15px;
 }
 
 .objective-bg-video {
@@ -139,21 +140,21 @@ figure.featured-image {
 
 .objective-text {
 	position: absolute;
-    top: 0;
-    height: 100%;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
+	top: 0;
+	height: 100%;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .objective-video-container {
-	    position: relative;
+	position: relative;
 }
 
 .profile {
-	> .menu-close-icon {
+	>.menu-close-icon {
 		display: none;
 	}
 }
@@ -165,7 +166,7 @@ figure.featured-image {
 	justify-content: flex-start;
 	min-height: 190px;
 
-	> .number-value {
+	>.number-value {
 		align-items: center;
 		display: flex;
 		flex-direction: row;
@@ -179,12 +180,25 @@ figure.featured-image {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	> .menu-close-icon {
+
+	>.menu-close-icon {
 		display: block;
 	}
 }
 
 @media screen and (max-width: 426px) {
+	.other-skills-list {
+		.skills-list-item {
+			width: 20%;
+		}
+	}
+
+	.skills-list {
+		.skills-list-item {
+			width: 25%;
+		}
+	}
+
 	.services .box {
 		display: flex;
 		justify-content: center;
@@ -194,19 +208,19 @@ figure.featured-image {
 	}
 
 	.profile-name {
-		> .menu-close-icon {
+		>.menu-close-icon {
 			display: none;
 		}
 	}
 
 	.personal-information-col:last-child {
-	    padding-left: 65px;
+		padding-left: 65px;
 	}
 
 	.personal-information-col:first-child {
-	    width: 65px;
+		width: 65px;
 	}
-	
+
 	.number {
 		display: flex;
 		flex-direction: column;
@@ -218,7 +232,7 @@ figure.featured-image {
 
 	.objective-text {
 		padding: 30px 50px;
-	    position: static;
+		position: static;
 	}
 
 	.objective-bg-video {
@@ -228,16 +242,181 @@ figure.featured-image {
 	.menu-wrapper.active .profile-photo {
 		width: 35%;
 	}
+
 	.menu-back {
-	   width: 80%;
+		width: 80%;
 	}
+
 	.menu-close-icon {
 		display: block !important;
 		right: 0px;
-	    top: -5px;
-	    position: absolute;
-	    padding: 15px;
-	    z-index: 10;
+		top: -5px;
+		position: absolute;
+		padding: 15px;
+		z-index: 10;
 	}
 
+}
+
+// Tooltip
+[data-tooltip] {
+	position: relative;
+	z-index: 10;
+}
+
+/* Positioning and visibility settings of the tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	left: 50%;
+	bottom: calc(100% + 5px);
+	pointer-events: none;
+	transition: 0.2s;
+	will-change: transform;
+}
+
+/* The actual tooltip with a dynamic width */
+[data-tooltip]:before {
+	content: attr(data-tooltip);
+	padding: 10px 18px;
+	min-width: 50px;
+	max-width: 300px;
+	width: max-content;
+	width: -moz-max-content;
+	border-radius: 6px;
+	font-size: 14px;
+	background-color: rgba(59, 72, 80, 0.9);
+	background-image: linear-gradient(30deg,
+			rgba(59, 72, 80, 0.44),
+			rgba(59, 68, 75, 0.44),
+			rgba(60, 82, 88, 0.44));
+	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	text-align: center;
+	white-space: pre-wrap;
+	transform: translate(-50%, -5px) scale(0.5);
+}
+
+/* Tooltip arrow */
+[data-tooltip]:after {
+	content: '';
+	border-style: solid;
+	border-width: 5px 5px 0px 5px;
+	border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+	transition-duration: 0s;
+	/* If the mouse leaves the element, 
+								the transition effects for the 
+								tooltip arrow are "turned off" */
+	transform-origin: top;
+	/* Orientation setting for the
+								slide-down effect */
+	transform: translateX(-50%) scaleY(0);
+}
+
+/* Tooltip becomes visible at hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Scales from 0.5 to 1 -> grow effect */
+[data-tooltip]:hover:before {
+	transition-delay: 0.3s;
+	transform: translate(-50%, -5px) scale(1);
+}
+
+/* Slide down effect only on mouseenter (NOT on mouseleave) */
+[data-tooltip]:hover:after {
+	transition-delay: 0.5s;
+	/* Starting after the grow effect */
+	transition-duration: 0.2s;
+	transform: translateX(-50%) scaleY(1);
+}
+
+/*
+	That's it.
+  */
+
+/* LEFT */
+/* Tooltip + arrow */
+[data-tooltip-location="left"]:before,
+[data-tooltip-location="left"]:after {
+	left: auto;
+	right: calc(100% + 5px);
+	bottom: 50%;
+}
+
+/* Tooltip */
+[data-tooltip-location="left"]:before {
+	transform: translate(-5px, 50%) scale(0.5);
+}
+
+[data-tooltip-location="left"]:hover:before {
+	transform: translate(-5px, 50%) scale(1);
+}
+
+/* Arrow */
+[data-tooltip-location="left"]:after {
+	border-width: 5px 0px 5px 5px;
+	border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+	transform-origin: left;
+	transform: translateY(50%) scaleX(0);
+}
+
+[data-tooltip-location="left"]:hover:after {
+	transform: translateY(50%) scaleX(1);
+}
+
+
+
+/* RIGHT */
+[data-tooltip-location="right"]:before,
+[data-tooltip-location="right"]:after {
+	left: calc(100% + 5px);
+	bottom: 50%;
+}
+
+[data-tooltip-location="right"]:before {
+	transform: translate(5px, 50%) scale(0.5);
+}
+
+[data-tooltip-location="right"]:hover:before {
+	transform: translate(5px, 50%) scale(1);
+}
+
+[data-tooltip-location="right"]:after {
+	border-width: 5px 5px 5px 0px;
+	border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
+	transform-origin: right;
+	transform: translateY(50%) scaleX(0);
+}
+
+[data-tooltip-location="right"]:hover:after {
+	transform: translateY(50%) scaleX(1);
+}
+
+
+
+/* BOTTOM */
+[data-tooltip-location="bottom"]:before,
+[data-tooltip-location="bottom"]:after {
+	top: calc(100% + 5px);
+	bottom: auto;
+}
+
+[data-tooltip-location="bottom"]:before {
+	transform: translate(-50%, 5px) scale(0.5);
+}
+
+[data-tooltip-location="bottom"]:hover:before {
+	transform: translate(-50%, 5px) scale(1);
+}
+
+[data-tooltip-location="bottom"]:after {
+	border-width: 0px 5px 5px 5px;
+	border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
+	transform-origin: bottom;
 }

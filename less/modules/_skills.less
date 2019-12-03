@@ -9,19 +9,38 @@
 	margin-bottom: 40px;
 }
 
-.skills-list{
+.skills-list, .other-skills-list {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
+.other-skills-list {
+	.skills-list-item {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		width: 15%;
+		i {
+			font-size: 2em;
+		}
+	}
+}
+
 .skills-list-item{
+	align-items: center;
+    display: flex;
+    justify-content: center;
+	margin: 5px 0;
+	width: 20%;
 	position: relative;
-	margin-bottom: 40px;
 
 	&:hover{
 
-		.skill-title{
+		.skill-title, i {
 			color: @color_main;
 		}
 
@@ -35,8 +54,8 @@
 		
 	}
 
-	&:last-child{
-		margin-bottom: 0;
+	> i {
+		font-size: 3em;
 	}
 }
 

@@ -170,9 +170,12 @@ figure.featured-image {
 		align-items: center;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: center;
 		min-height: 80px;
 		width: 100%;
+		> i {
+			padding-left: 10px;
+		}
 	}
 }
 
@@ -180,10 +183,23 @@ figure.featured-image {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	> span {
+		flex: 1
+	}
 
 	>.menu-close-icon {
 		display: block;
 	}
+}
+
+
+@media (min-width: 426px) and (max-width: 1400px) {
+	.number {
+		> .number-value {
+			font-size: 35px;
+		}
+	}
+	
 }
 
 @media screen and (max-width: 426px) {
@@ -228,6 +244,9 @@ figure.featured-image {
 		justify-content: center;
 		min-height: 140px;
 		padding: 10px;
+		>.number-value {
+			font-size: 25px;
+		}
 	}
 
 	.objective-text {

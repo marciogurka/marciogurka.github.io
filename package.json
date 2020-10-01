@@ -44,5 +44,8 @@
   "dependencies": {
     "particles.js": "^2.0.0",
     "typed.js": "^2.0.5"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }
